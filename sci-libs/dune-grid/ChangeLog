@@ -1,0 +1,6 @@
+# ChangeLog for sci-libs/dune-grid
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header$
+
+	09 Jul 2014; Jouni Kosonen <jouni.kosonen@tukesoft.com> +dune-grid-2.3.1-r1.ebuild:
+	Enable experimental grid extensions for sci-misc/opm-porsol
