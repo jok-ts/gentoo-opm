@@ -10,7 +10,7 @@ DESCRIPTION="A small library for automatic differentiation supporting sparse Jac
 HOMEPAGE="http://www.opm-project.org/modules.php"
 SRC_URI="https://github.com/OPM/${PN}/archive/release/${PV}/final.tar.gz -> ${P}.tar.gz"
 
-LICENSE="GPL-2+"
+LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64"
 
