@@ -13,17 +13,30 @@ SRC_URI="http://www.dune-project.org/download/${PV}/${P}.tar.gz"
 LICENSE="GPL-2-with-exceptions"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="mpi"
+IUSE="doxygen gmp mpi"
 
 RDEPEND="
 		virtual/blas
 		virtual/lapack
+		dev-libs/boost
 		mpi? ( virtual/mpi ) "
 
 DEPEND="${RDEPEND}
+		doxygen? (
+			app-doc/doxygen
+			media-gfx/inkscape
+		)
 		virtual/pkgconfig"
 
-# Automagicals, fix:
+src_configure() {
+	local mycmakeargs=(
+		$(cmake-utils_use_find_package mpi MPI)
+		$(cmake-utils_use_find_package gmp GMP)
+	)
+	cmake-utils_src_configure
+}
+
+# Automagicals, only partially fixed:
 # -- The following OPTIONAL packages have been found:
 #
 #  * Doxygen
