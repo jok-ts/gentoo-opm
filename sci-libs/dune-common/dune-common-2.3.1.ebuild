@@ -19,6 +19,7 @@ RDEPEND="
 		virtual/blas
 		virtual/lapack
 		dev-libs/boost
+		gmp? ( dev-libs/gmp )
 		mpi? ( virtual/mpi ) "
 
 DEPEND="${RDEPEND}
